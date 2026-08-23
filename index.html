@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mifthahul Jannat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        *{box-sizing:border-box}
+        :root{--b:#0f172a;--c:rgba(30,41,59,.85);--g:linear-gradient(135deg,#6366f1,#a855f7,#ec4899);--cy:#38bdf8;--bo:rgba(255,255,255,.15)}
+        body{font-family:'Plus Jakarta Sans','Segoe UI Emoji','Apple Color Emoji',sans-serif;background:var(--b);color:#f8fafc}
+        .tg{background:var(--g);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .navbar{background:rgba(15,23,42,.95)!important;backdrop-filter:blur(12px);border-bottom:1px solid var(--bo)}
+        .navbar-brand{font-weight:800;font-size:1.4rem}
+        .nav-link{color:#cbd5e1!important;font-weight:500}
+        .nav-link:hover,.nav-link.active{color:#fff!important}
+        .hero{padding:120px 0 80px}
+        .pimg{position:relative;display:inline-block}
+        .pimg::before{content:'';position:absolute;inset:-6px;background:var(--g);border-radius:50%;filter:blur(10px);opacity:.75;transition:.3s}
+        .pimg:hover::before{opacity:1}
+        .pimg img{width:220px;height:220px;object-fit:cover;border-radius:50%;position:relative;border:3px solid var(--bo)}
+        .gc{background:var(--c);backdrop-filter:blur(16px);border:1px solid var(--bo);border-radius:20px;transition:.3s}
+        .gc:hover{transform:translateY(-8px);border-color:rgba(168,85,247,.5);box-shadow:0 20px 30px -10px rgba(99,102,241,.3)}
+        .st{font-weight:800;letter-spacing:-.5px;margin-bottom:2rem;display:inline-block}
+        .bg{background:var(--g);color:#fff;border:none;font-weight:600;border-radius:30px;padding:12px 30px;transition:.2s}
+        .bg:hover{color:#fff;transform:scale(1.03);box-shadow:0 10px 20px rgba(236,72,153,.3)}
+        .bo{border:2px solid rgba(255,255,255,.3);color:#fff;font-weight:600;border-radius:30px;padding:10px 28px;transition:.3s}
+        .bo:hover{background:rgba(255,255,255,.15);color:#fff;border-color:#fff}
+        .tag{font-size:.85rem;font-weight:600;padding:6px 14px;background:rgba(99,102,241,.25);color:#c7d2fe;border:1px solid rgba(99,102,241,.4);border-radius:20px;display:inline-block;margin:0 6px 8px 0}
+        .sb{font-size:1rem;padding:10px 20px;margin:6px;border-radius:30px;background:rgba(255,255,255,.08);border:1px solid var(--bo);color:#fff;transition:.3s;cursor:pointer}
+        .sb:hover{background:var(--g);color:#fff;border-color:transparent;transform:translateY(-3px)}
+        .fc{background:rgba(15,23,42,.8);border:1px solid var(--bo);color:#fff!important;border-radius:12px;padding:12px 16px}
+        .fc:focus{background:rgba(15,23,42,.95);border-color:#a855f7;box-shadow:0 0 0 .25rem rgba(168,85,247,.25)}
+        #typing{color:var(--cy);border-right:2px solid var(--cy);padding-right:4px;animation:blink .8s step-end infinite}
+        @keyframes blink{50%{border-color:transparent}}
+        #scrollBtn{display:none;position:fixed;bottom:30px;right:30px;z-index:99;background:var(--g);color:#fff;border:none;width:48px;height:48px;border-radius:50%;cursor:pointer;box-shadow:0 10px 20px rgba(0,0,0,.3);transition:.3s}
+        #scrollBtn:hover{transform:scale(1.1)}
+        footer{border-top:1px solid var(--bo);background:rgba(15,23,42,.95)}
+        .text-muted{color:#cbd5e1!important}
+        .cv-section .gc{padding:2rem}
+        .cv-section .gc h5{color:#f8fafc;font-weight:700;margin-bottom:1rem;border-bottom:2px solid rgba(168,85,247,.3);padding-bottom:.5rem}
+        .cv-section .gc h5 i{margin-right:.5rem}
+        .cv-section ul{list-style:none;padding:0}
+        .cv-section ul li{padding:.3rem 0;color:#cbd5e1;border-bottom:1px solid rgba(255,255,255,.05)}
+        .cv-section ul li:last-child{border-bottom:none}
+        .cv-section .contact-item{display:flex;align-items:center;gap:.8rem;padding:.5rem 0;color:#cbd5e1}
+        .cv-section .contact-item i{width:20px;color:#a855f7}
+        .skill-bar{display:flex;align-items:center;gap:1rem;padding:.3rem 0}
+        .skill-bar .skill-name{min-width:120px;color:#f8fafc}
+        .skill-bar .bar{flex:1;height:6px;background:rgba(255,255,255,.1);border-radius:3px;overflow:hidden}
+        .skill-bar .bar .fill{height:100%;border-radius:3px;background:var(--g)}
+    </style>
+</head>
+<body>
+    <button id="scrollBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">Mifthahul<span class="tg">.Jannat</span></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#n"><i class="fa-solid fa-bars text-white fs-3"></i></button>
+            <div class="collapse navbar-collapse" id="n">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero text-center text-md-start">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <div class="pimg"><img src="https://lh3.googleusercontent.com/d/1T4wG2VvbGfoSOwqDj6Fkcfz_Ih_zxuD-" alt="Mifthahul Jannat" id="profileImage" /></div>
+                </div>
+                <div class="col-md-8 pt-4 pt-md-0">
+                    <h1 class="display-3 fw-extrabold mb-2 text-white">Hi, I'm <span class="tg">Mifthahul Jannat</span></h1>
+                    <p class="fs-3 fw-semibold text-white">I build as a <span id="typing">Student</span></p>
+                    <p class="text-muted fs-5 my-3">3rd Semester B.Sc. CSE Student · passionate about software & web.</p>
+                    <div class="mt-4">
+                        <a href="#resume" class="bg me-2">View Resume <i class="fa-solid fa-file-pdf ms-2"></i></a>
+                        <a href="#contact" class="bo" onclick="alert('📧 mifthahul.jannat@email.com')">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container my-5 py-4">
+        <h2 class="st tg">About Me</h2>
+        <div class="gc p-4 p-md-5">
+            <p class="fs-5 text-muted">Motivated and detail-oriented Computer Science and Engineering undergraduate (Batch 47th) at Premier University Chittagong, with a strong foundation in programming, data structures, and software development. Eager to apply analytical thinking and technical skills to real-world projects, and to grow as a software engineer through hands-on experience and continuous learning.</p>
+            <div class="mt-4">
+                <h5 class="fw-bold mb-3 text-white"><i class="fa-solid fa-graduation-cap me-2 tg"></i> Current Focus</h5>
+                <div><span class="tag">OOP</span><span class="tag">Data Structures</span><span class="tag">Algorithms</span><span class="tag">Database Systems</span><span class="tag">Software Engineering</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUME / CV SECTION -->
+    <section id="resume" class="cv-section py-5">
+        <div class="container">
+            <h2 class="st tg">Resume</h2>
+            <p class="text-muted mb-4">My academic journey, skills, projects, and experience.</p>
+            
+            <div class="row g-4">
+                <!-- Left Column -->
+                <div class="col-lg-4">
+                    <!-- Contact -->
+                    <div class="gc p-4 mb-4">
+                        <h5><i class="fa-solid fa-address-card tg"></i> Contact</h5>
+                        <div class="contact-item"><i class="fa-solid fa-location-dot"></i> Chattogram, Bangladesh</div>
+                        <div class="contact-item"><i class="fa-solid fa-phone"></i> +880 1XXX-XXXXXX</div>
+                        <div class="contact-item"><i class="fa-solid fa-envelope"></i> mifthahul.jannat@email.com</div>
+                        <div class="contact-item"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/mifthahuljannat</div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="gc p-4 mb-4">
+                        <h5><i class="fa-solid fa-graduation-cap tg"></i> Education</h5>
+                        <div><strong class="text-white">BSc in CSE</strong></div>
+                        <div class="text-muted small">Premier University Chittagong</div>
+                        <div class="text-muted small">Batch 47th | 2025 - Present</div>
+                        <hr class="border-secondary"/>
+                        <div><strong class="text-white">Higher Secondary (Science)</strong></div>
+                        <div class="text-muted small">Chittagong College</div>
+                        <div class="text-muted small">2023 - 2025</div>
+                        <hr class="border-secondary"/>
+                        <div><strong class="text-white">Secondary School (Science)</strong></div>
+                        <div class="text-muted small">Nasirabad Girls High School</div>
+                        <div class="text-muted small">2021 - 2023</div>
+                    </div>
+
+                    <!-- Languages -->
+                    <div class="gc p-4 mb-4">
+                        <h5><i class="fa-solid fa-language tg"></i> Languages</h5>
+                        <div class="text-muted">Bengali — Native</div>
+                        <div class="text-muted">English — Fluent</div>
+                    </div>
+
+                    <!-- Interests -->
+                    <div class="gc p-4">
+                        <h5><i class="fa-solid fa-heart tg"></i> Interests</h5>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="tag">Competitive Programming</span>
+                            <span class="tag">Open Source</span>
+                            <span class="tag">Robotics</span>
+                            <span class="tag">Photography</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="col-lg-8">
+                    <!-- Profile -->
+                    <div class="gc p-4 mb-4">
+                        <h5><i class="fa-solid fa-user tg"></i> Profile</h5>
+                        <p class="text-muted">Motivated and detail-oriented Computer Science and Engineering undergraduate (Batch 47th) at Premier University Chittagong, with a strong foundation in programming, data structures, and software development. Eager to apply analytical thinking and technical skills to real-world projects, and to grow as a software engineer through hands-on experience and continuous learning.</p>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="gc p-4 mb-4">
+                        <h5><i class="fa-solid fa-code tg"></i> Technical Skills</h5>
+                        <div class="skill-bar"><span class="skill-name">C / C++ / Java</span><div class="bar"><div class="fill" style="width:85%"></div></div></div>
+                        <div class="skill-bar"><span class="skill-name">Python</span><div class="bar"><div class="fill" style="width:80%"></div></div></div>
+                        <div class="skill-bar"><span class="skill-name">Web Development</span><div class="bar"><div class="fill" style="width:70%"></div></div></div>
+                        <div class="skill-bar"><span class="skill-name">SQL & Databases</span><div class="bar"><div class="fill" style="width:80%"></div></div></div>
+                        <div class="skill-bar"><span class="skill-name">Data Structures</span><div class="bar"><div class="fill" style="width:85%"></div></div></div>
+                        <div class="skill-bar"><span class="skill-name">Git & GitHub</span><div class="bar"><div class="fill" style="width:70%"></div></div></div>
+                    </div>
+
+                    <!-- Projects -->
+                    <div class="gc p-4 mb-4">
+                        <h5><i class="fa-solid fa-folder-open tg"></i> Projects</h5>
+                        <div class="mb-3">
+                            <strong class="text-white">Online Attendance Management System</strong> <span class="text-muted small">(2026)</span>
+                            <p class="text-muted small mb-1">- Web-based attendance tracker using PHP, MySQL, and Bootstrap</p>
+                            <p class="text-muted small">- Role-based login for students, faculty, admin with real-time reports</p>
+                        </div>
+                        <div>
+                            <strong class="text-white">Student Result Analyzer (Python)</strong> <span class="text-muted small">(2026)</span>
+                            <p class="text-muted small mb-1">- Desktop app to analyze semester results with Python & Tkinter</p>
+                            <p class="text-muted small">- Automated CGPA calculation, reducing manual computation time</p>
+                        </div>
+                    </div>
+
+                    <!-- Experience -->
+                    <div class="gc p-4 mb-4">
+                        <h5><i class="fa-solid fa-briefcase tg"></i> Experience</h5>
+                        <div>
+                            <strong class="text-white">Computer Club Member</strong>
+                            <div class="text-muted small">Premier University Chittagong | 2025 - Present</div>
+                            <p class="text-muted small mt-1">- Participate in departmental programming contests and coding workshops<br/>- Collaborate on club-led coding sessions and beginner mentoring</p>
+                        </div>
+                    </div>
+
+                    <!-- Certifications -->
+                    <div class="gc p-4 mb-4">
+                        <h5><i class="fa-solid fa-certificate tg"></i> Certifications</h5>
+                        <ul>
+                            <li>Introduction to Programming — Coursera</li>
+                            <li>Web Development Fundamentals — freeCodeCamp</li>
+                            <li>Database Management with SQL — Udemy</li>
+                        </ul>
+                    </div>
+
+                    <!-- References -->
+                    <div class="gc p-4">
+                        <h5><i class="fa-solid fa-address-book tg"></i> References</h5>
+                        <div class="mb-3">
+                            <strong class="text-white">Dr. Nusrat Jahan</strong>
+                            <div class="text-muted small">Associate Professor, Dept. of CSE, Premier University Chittagong</div>
+                            <div class="text-muted small">📧 nusrat.jahan@puc.edu.bd | 📞 +880 1734-556677</div>
+                        </div>
+                        <div>
+                            <strong class="text-white">Mr. Kamrul Hasan</strong>
+                            <div class="text-muted small">Lecturer, Dept. of CSE, Premier University Chittagong</div>
+                            <div class="text-muted small">📧 kamrul.hasan@puc.edu.bd | 📞 +880 1856-998877</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="st tg">Featured Projects</h2>
+            <p class="text-muted mb-4">Academic & practical builds.</p>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col"><div class="card gc h-100 p-4 pc">
+                    <div class="card-body p-0 d-flex flex-column">
+                        <i class="fa-solid fa-book-bookmark fs-1 tg mb-3"></i>
+                        <h4 class="fw-bold text-white mb-2">Library Management</h4>
+                        <p class="text-muted flex-grow-1">Java console app · OOP, inventory, borrowing.</p>
+                        <div class="mt-3"><span class="tag">Java</span><span class="tag">OOP</span></div>
+                    </div>
+                </div></div>
+                <div class="col"><div class="card gc h-100 p-4 pc">
+                    <div class="card-body p-0 d-flex flex-column">
+                        <i class="fa-solid fa-laptop-code fs-1 tg mb-3"></i>
+                        <h4 class="fw-bold text-white mb-2">Personal Portfolio</h4>
+                        <p class="text-muted flex-grow-1">Dark glassmorphic single-page · Bootstrap 5.</p>
+                        <div class="mt-3"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Bootstrap</span></div>
+                    </div>
+                </div></div>
+                <div class="col"><div class="card gc h-100 p-4 pc">
+                    <div class="card-body p-0 d-flex flex-column">
+                        <i class="fa-solid fa-building-columns fs-1 tg mb-3"></i>
+                        <h4 class="fw-bold text-white mb-2">Banking Simulator</h4>
+                        <p class="text-muted flex-grow-1">C++ console · accounts, deposits, withdrawals.</p>
+                        <div class="mt-3"><span class="tag">C++</span><span class="tag">Console</span></div>
+                    </div>
+                </div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="container my-5 py-4">
+        <h2 class="st tg">Technical Stack</h2>
+        <div class="gc p-4 p-md-5 text-center">
+            <div class="d-flex flex-wrap justify-content-center">
+                <span class="sb"><i class="fa-brands fa-cpp me-2"></i>C++</span>
+                <span class="sb"><i class="fa-brands fa-java me-2"></i>Java</span>
+                <span class="sb"><i class="fa-brands fa-html5 me-2"></i>HTML5</span>
+                <span class="sb"><i class="fa-brands fa-css3-alt me-2"></i>CSS3</span>
+                <span class="sb"><i class="fa-brands fa-bootstrap me-2"></i>Bootstrap 5</span>
+                <span class="sb"><i class="fa-brands fa-git-alt me-2"></i>Git & GitHub</span>
+                <span class="sb"><i class="fa-solid fa-code me-2"></i>VS Code</span>
+                <span class="sb"><i class="fa-solid fa-diagram-project me-2"></i>Data Structures</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="st tg">Get In Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="gc p-4 p-md-5">
+                        <form id="cf" onsubmit="return validateForm()">
+                            <div class="mb-3"><label class="form-label text-white fw-semibold">Name</label><input type="text" class="fc" id="name" placeholder="Your name" /></div>
+                            <div class="mb-3"><label class="form-label text-white fw-semibold">Email</label><input type="email" class="fc" id="email" placeholder="Your email" /></div>
+                            <div class="mb-4"><label class="form-label text-white fw-semibold">Message</label><textarea class="fc" id="message" rows="4" placeholder="How can I help?"></textarea></div>
+                            <button type="submit" class="bg w-100 py-3">Send Message</button>
+                        </form>
+                        <div id="fm" class="mt-3 text-center" style="display:none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p class="mb-1 text-muted">&copy; <span id="year"></span> Mifthahul Jannat. All Rights Reserved.</p>
+            <p class="small text-muted">B.Sc. CSE Student</p>
+            <button class="btn btn-sm bo mt-2" onclick="alert('❤️ Thank you for visiting!')"><i class="fa-solid fa-heart text-danger me-1"></i> Made with Passion</button>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'})}));
+        const w=['Student','Developer','CSE Engineer','Problem Solver'];let wi=0,ci=0,del=!1;const el=document.getElementById('typing');(function type(){const c=w[wi];el.textContent=del?c.substring(0,ci-1):c.substring(0,ci+1);del?ci--:ci++;if(!del&&ci===c.length){del=!0;setTimeout(type,2000);return}if(del&&ci===0){del=!1;wi=(wi+1)%w.length;setTimeout(type,500);return}setTimeout(type,del?50:100)})();
+        function validateForm(){const n=document.getElementById('name').value.trim(),e=document.getElementById('email').value.trim(),m=document.getElementById('message').value.trim(),d=document.getElementById('fm');if(!n||!e||!m){d.style.display='block';d.className='alert alert-danger mt-3';d.innerHTML='<i class="fa-solid fa-triangle-exclamation me-2"></i> All fields required.';return!1}if(!e.includes('@')||!e.includes('.')){d.style.display='block';d.className='alert alert-danger mt-3';d.innerHTML='<i class="fa-solid fa-triangle-exclamation me-2"></i> Valid email required.';return!1}d.style.display='block';d.className='alert alert-success mt-3';d.innerHTML='<i class="fa-solid fa-check-circle me-2"></i> Thanks '+n+'! Message sent.';document.getElementById('cf').reset();return!1}
+        const btn=document.getElementById('scrollBtn');window.addEventListener('scroll',()=>btn.style.display=window.scrollY>300?'block':'none');
+        document.getElementById('profileImage').onclick=()=>alert('👋 Hi! Mifthahul Jannat.');
+        document.querySelectorAll('.sb').forEach(b=>b.onclick=()=>alert('🛠️ '+b.textContent.trim()));
+        document.querySelectorAll('.pc').forEach(c=>c.onclick=()=>alert('📁 '+c.querySelector('h4').textContent));
+    </script>
+</body>
+</html>
