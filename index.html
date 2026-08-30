@@ -574,4 +574,35 @@
                                                 <span class="tag">🔀 ${repo.forks_count}</span>
                                                 <span class="tag">${repo.language || 'Unknown'}</span>
                                             </div>
-                                            <a href="${repo.html_url}" target="_blank" class="text-decoration
+                                            <a href="${repo.html_url}" target="_blank" class="text-decoration-none small tg">View on GitHub →</a>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                            <div class="mt-3">
+                                <span class="tag"><i class="fa-solid fa-code me-1"></i> REST API</span>
+                                <span class="tag"><i class="fa-solid fa-brackets-curly me-1"></i> JSON Format</span>
+                                <span class="tag"><i class="fa-brands fa-github me-1"></i> GitHub API</span>
+                            </div>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Error fetching GitHub projects:', error);
+                const container = document.getElementById('api-container');
+                if (container) {
+                    container.innerHTML = `
+                        <div class="gc p-4 api-section">
+                            <h5><i class="fa-brands fa-github tg"></i> GitHub Projects</h5>
+                            <p class="text-muted">Could not fetch projects. Please try again later.</p>
+                        </div>
+                    `;
+                }
+            }
+        }
+
+        // Fetch GitHub projects on page load
+        fetchGitHubProjects();
+    </script>
+</body>
+</html>
